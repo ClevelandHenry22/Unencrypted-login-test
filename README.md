@@ -2,7 +2,7 @@
 
 ## Capturing and Analysis of Http Credentials
 
-* A cybersecurity project showing how insecure login systems expose user credentials. *
+*A cybersecurity project showing how insecure login systems expose user credentials.*
 
 ## Project Overview
 
@@ -33,7 +33,7 @@ This is intentionally vulnerable for cybersecurity learning, specifically in:
 
 -Web exploitation fundamentals
 
-** How to Run THis Project (PHP Built-In Server)
+**How to Run THis Project (PHP Built-In Server)
 
 This project helps beginners understand how insecure login forms can leak credentials during trasmission and how attackers analyze them.
 
@@ -41,12 +41,18 @@ This version uses the simplest possible server so as to focus on cybersecurity c
 
 ## Project Requirements
 
-**- Software / OS **
+-**Software / OS **
+
        - Kali Linux (VM or Bare Metal)
+       
        - Apache2 Web Server
+       
        - PHP 8+
+       
        - Wireshark
+       
        - Browser(Firefox recommended)
+       
 
 ## Project Directory
   
@@ -55,6 +61,16 @@ This version uses the simplest possible server so as to focus on cybersecurity c
 
 In your Kali Linux machine open the terminal and enter the command:
 
-`sudo apt install php`
+`sudo su` - to run as the root, put your Kali password to proceed.
 
-2.**
+`apt install php`
+
+2.** Create a directory in /home called insecure-login **
+
+`mkdir insecure-login`
+
+3. **Move to the insecure-login directory and add these new directories with these files in them**
+
+`mkdir logs public server`
+
+   
