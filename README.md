@@ -74,8 +74,7 @@ project-root/
 │
 
 │── logs/
-
-      ├── login_attempts.log
+       ├── login_attempts.log
 
 
 
@@ -85,56 +84,56 @@ project-root/
 
 In your Kali Linux machine open the terminal and enter the command:
 
-`sudo su` - to run as the root, put your Kali password to proceed.
+-`sudo su` - to run as the root, put your Kali password to proceed.
 
-`apt install php`
+-`apt install php`
 
 2. **Create a directory in /home called insecure-login**
 
-`mkdir insecure-login`
+-`mkdir insecure-login`
 
 3. **Move to the insecure-login directory and add these new directories with these files in them**
 
-`cd insecure-login` - change directory to insecure login
+-`cd insecure-login` - change directory to insecure login
 
 
-`mkdir logs public server` - make these directories: logs, public, server.ls
+-`mkdir logs public server` - make these directories: logs, public, server.ls
 
 4. **Create these files under `public` directory**       
 
-`cd public` - change to public directory
+-`cd public` - change to public directory
 
 **After editing the created files example `nano index.html` press `CTRL + O` then `ENTER` and lasty `CTRL + X` to save the changes.**
 
-`nano index.html` 
+-`nano index.html` 
                  - creates the file index.html paste code from index.html in files section  
                  - serves as the main landing page containing the login form where users enter their username and password
 
-`nano login.php` 
+-`nano login.php` 
                  - creates another file login.php, paste the code from login.php in files section  
                  - processed login form submissions by checking entered credentials against the stored `users.txt`
 
-`nano dashboard.php`
+-`nano dashboard.php`
                  - creates file dashboard.php, paste code from dashboard.php in files section
                  -displays the protected dashboard page that only logged-in users access after successful authentication
 
 5. **Create the file users.txt under server/**
 
-`cd ..` - this will move you back to insecure-login directory where server directory is
+-`cd ..` - this will move you back to insecure-login directory where server directory is
 
-`cd server` - this moves you to server directory
+-`cd server` - this moves you to server directory
 
-`touch users.txt`
+-`touch users.txt`
             - this creates the file users.txt
             -it will store the list of valid usernames and hashed passwords for login verification
 
 6. **Create the file login_attempts in logs/**
 
-`cd ..` - moves you back to insecure-login directory
+-`cd ..` - moves you back to insecure-login directory
 
-`cd logs` - moves you to logs directory
+-`cd logs` - moves you to logs directory
 
-`touch login_attempts.log`
+-`touch login_attempts.log`
             - creates a file called login_attempts.log
             - records every login attempt (successful or failed) for monitoring and audit purposes and security analysis
    
