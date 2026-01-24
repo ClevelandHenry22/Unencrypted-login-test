@@ -81,7 +81,7 @@ project-root/
 
 ## Project Workflow
   
-1.**Install PHP if missing**
+1. **Install PHP if missing**
 
 In your Kali Linux machine open the terminal and enter the command:
 
@@ -89,18 +89,18 @@ In your Kali Linux machine open the terminal and enter the command:
 
 `apt install php`
 
-2.**Create a directory in /home called insecure-login**
+2. **Create a directory in /home called insecure-login**
 
 `mkdir insecure-login`
 
-3.**Move to the insecure-login directory and add these new directories with these files in them**
+3. **Move to the insecure-login directory and add these new directories with these files in them**
 
 `cd insecure-login` - change directory to insecure login
 
 
 `mkdir logs public server` - make these directories: logs, public, server.ls
 
-4.**Create these files under `public` directory**       
+4. **Create these files under `public` directory**       
 
 `cd public` - change to public directory
 
