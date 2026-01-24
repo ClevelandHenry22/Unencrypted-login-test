@@ -118,6 +118,23 @@ In your Kali Linux machine open the terminal and enter the command:
                  - creates file dashboard.php, paste code from dashboard.php in files section
                  -displays the protected dashboard page that only logged-in users access after successful authentication
 
+5. **Create the file users.txt under server/**
 
+`cd ..` - this will move you back to insecure-login directory where server directory is
 
+`cd server` - this moves you to server directory
+
+`touch users.txt`
+            - this creates the file users.txt
+            -it will store the list of valid usernames and hashed passwords for login verification
+
+6. **Create the file login_attempts in logs/**
+
+`cd ..` - moves you back to insecure-login directory
+
+`cd logs` - moves you to logs directory
+
+`touch login_attempts.log`
+            - creates a file called login_attempts.log
+            - records every login attempt (successful or failed) for monitoring and audit purposes and security analysis
    
