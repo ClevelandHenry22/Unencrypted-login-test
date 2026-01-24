@@ -55,6 +55,19 @@ This version uses the simplest possible server so as to focus on cybersecurity c
        
 
 ## Project Directory
+project-root/
+│── public/
+│     ├── index.php
+│     ├── login.php
+│     ├── dashboard.php
+│
+│── server/
+│     ├── users.txt
+│
+│── logs/
+      ├── logs.txt
+
+
 
 ## Project Workflow
   
@@ -72,6 +85,32 @@ In your Kali Linux machine open the terminal and enter the command:
 
 3.**Move to the insecure-login directory and add these new directories with these files in them**
 
-`mkdir logs public server`
+`cd insecure-login` - change directory to insecure login
+
+
+`mkdir logs public server` - make these directories: logs, public, server.ls
+
+4.**Create these files under `public` directory
+
+`cd public` - change to public directory
+
+**After editing the created files example nano index.html press `CTRL + O` then `ENTER` and lasty `CTRL + X` to save the changes.**
+
+`nano index.html` 
+
+                 - after creating the file index.html inside it paste the code from index.html in files section         
+
+`nano login.php` 
+    
+                 - create another file login.php and paste the code in files section.     
+                 - processed login form submissions by checking entered credentials against the stored `users.txt`
+
+`nano dashboard.php`
+
+                 - creates file dashboard.php paste code in files
+
+                 -displays the protected dashboard page that only logged-in                         users access after successful authentication
+
+
 
    
