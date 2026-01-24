@@ -75,7 +75,7 @@ project-root/
 
 │── logs/
 
-      ├── logs.txt
+      ├── login_attempts.log
 
 
 
@@ -104,22 +104,18 @@ In your Kali Linux machine open the terminal and enter the command:
 
 `cd public` - change to public directory
 
-**After editing the created files example nano index.html press `CTRL + O` then `ENTER` and lasty `CTRL + X` to save the changes.**
+**After editing the created files example `nano index.html` press `CTRL + O` then `ENTER` and lasty `CTRL + X` to save the changes.**
 
 `nano index.html` 
-
                  - creates the file index.html paste code from index.html in files section  
                  - serves as the main landing page containing the login form where users enter their username and password
 
 `nano login.php` 
-    
                  - creates another file login.php, paste the code from login.php in files section  
                  - processed login form submissions by checking entered credentials against the stored `users.txt`
 
 `nano dashboard.php`
-
                  - creates file dashboard.php, paste code from dashboard.php in files section
-
                  -displays the protected dashboard page that only logged-in users access after successful authentication
 
 
