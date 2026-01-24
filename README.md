@@ -84,7 +84,7 @@ project-root/
 
 In your Kali Linux machine open the terminal and enter the command:
 
--`sudo su` - to run as the root, put your Kali password to proceed.
+-`sudo su`- to run as the root, put your Kali password to proceed.
 
 -`apt install php`
 
