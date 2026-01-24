@@ -56,15 +56,25 @@ This version uses the simplest possible server so as to focus on cybersecurity c
 
 ## Project Directory
 project-root/
+
 │── public/
+
 │     ├── index.php
+
 │     ├── login.php
+
 │     ├── dashboard.php
+
 │
+
 │── server/
+
 │     ├── users.txt
+
 │
+
 │── logs/
+
       ├── logs.txt
 
 
@@ -90,7 +100,7 @@ In your Kali Linux machine open the terminal and enter the command:
 
 `mkdir logs public server` - make these directories: logs, public, server.ls
 
-4.**Create these files under `public` directory
+4.**Create these files under `public` directory**       
 
 `cd public` - change to public directory
 
@@ -98,18 +108,19 @@ In your Kali Linux machine open the terminal and enter the command:
 
 `nano index.html` 
 
-                 - after creating the file index.html inside it paste the code from index.html in files section         
+                 - creates the file index.html paste code from index.html in files section  
+                 - serves as the main landing page containing the login form where users enter their username and password
 
 `nano login.php` 
     
-                 - create another file login.php and paste the code in files section.     
+                 - creates another file login.php, paste the code from login.php in files section  
                  - processed login form submissions by checking entered credentials against the stored `users.txt`
 
 `nano dashboard.php`
 
-                 - creates file dashboard.php paste code in files
+                 - creates file dashboard.php, paste code from dashboard.php in files section
 
-                 -displays the protected dashboard page that only logged-in                         users access after successful authentication
+                 -displays the protected dashboard page that only logged-in users access after successful authentication
 
 
 
