@@ -21,7 +21,7 @@ This project demonstrates how an insecure login system:
 -Uses no HTTPS
 
 
-This is intentionally vulnerable for cybersecurity learning, specifically in:
+**This is intentionally vulnerable for cybersecurity learning, specifically in**:
 
 -Packet sniffing
 
@@ -33,7 +33,7 @@ This is intentionally vulnerable for cybersecurity learning, specifically in:
 
 -Web exploitation fundamentals
 
-**How to Run THis Project (PHP Built-In Server)
+**How to Run THis Project (PHP Built-In Server)**
 
 This project helps beginners understand how insecure login forms can leak credentials during trasmission and how attackers analyze them.
 
@@ -41,7 +41,7 @@ This version uses the simplest possible server so as to focus on cybersecurity c
 
 ## Project Requirements
 
--**Software / OS **
+**-Software/OS**
 
        - Kali Linux (VM or Bare Metal)
        
@@ -57,7 +57,7 @@ This version uses the simplest possible server so as to focus on cybersecurity c
 ## Project Directory
   
 
-1.** Install PHP if missing **
+1.**Install PHP if missing**
 
 In your Kali Linux machine open the terminal and enter the command:
 
@@ -65,7 +65,7 @@ In your Kali Linux machine open the terminal and enter the command:
 
 `apt install php`
 
-2.** Create a directory in /home called insecure-login **
+2.**Create a directory in /home called insecure-login**
 
 `mkdir insecure-login`
 
