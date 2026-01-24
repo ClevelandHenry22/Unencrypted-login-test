@@ -55,8 +55,9 @@ This version uses the simplest possible server so as to focus on cybersecurity c
        
 
 ## Project Directory
-  
 
+## Project Workflow
+  
 1.**Install PHP if missing**
 
 In your Kali Linux machine open the terminal and enter the command:
