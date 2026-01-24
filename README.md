@@ -6,7 +6,7 @@
 
 ## Project Overview
 
-This project demonstrates how an insecure login system:
+**This project demonstrates how an insecure login system**:
 
 -Stores credentials in plain text
 
@@ -69,7 +69,7 @@ In your Kali Linux machine open the terminal and enter the command:
 
 `mkdir insecure-login`
 
-3. **Move to the insecure-login directory and add these new directories with these files in them**
+3.**Move to the insecure-login directory and add these new directories with these files in them**
 
 `mkdir logs public server`
 
