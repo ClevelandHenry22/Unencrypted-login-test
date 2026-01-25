@@ -149,7 +149,7 @@ In your Kali Linux machine open the terminal and enter the command:
 
 ![screenshot](wireshark-final.png)
 
-![screenshot](USERS.TXT_IN _USE.png)
+![screenshot](users-in-use.png)
 
 ![screenshot]()
 
