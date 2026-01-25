@@ -147,6 +147,8 @@ In your Kali Linux machine open the terminal and enter the command:
 ![screenshot](admin_dashboard.png)
 
 ![screenshot](wireshark-1.png)
+
+![screenshot](final-ws.png)
 ![screenshot](wireshark-final.png)
 
 ![screenshot](users-in-use.png)
