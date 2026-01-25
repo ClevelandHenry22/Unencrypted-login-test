@@ -137,4 +137,15 @@ In your Kali Linux machine open the terminal and enter the command:
             - creates a file called login_attempts.log
             - records every login attempt (successful or failed) for monitoring and audit purposes and security analysis
 
+            
+
 ![screenshot](updated_current_login.png)
+
+
+
+
+![screenshot](admin_dashboard.png)
+
+
+
+
