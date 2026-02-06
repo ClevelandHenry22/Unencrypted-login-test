@@ -147,29 +147,30 @@ In your Kali Linux machine open the terminal and enter the command:
        -serves files from the `public/` directory
        -uses `sudo` because port 80 requires admin/root privileges
 
-   **It launches your web application so that any device on the same network can access it by visiting your machine's IP address in their browser.**
+ **It launches your web application so that any device on the same network can access it by visiting your machine's IP address in their browser.**
 
-8. **In your browser (firefox), enter this credentials in the address `http://127.0.0.1`**
-
--This would help you navigate to the login page below
-![screenshot](updated_current_login.png)
-
-9. **You can use the credentials `admin` and `password123`**
-
-    -*These are inside `server/login.php` in the `$validUser` and `$validPass` variables*
-     -*press `Login` after you enter the credentials to access the `Admin Dashboard below*
-
-![screenshot](admin_dashboard.png)
-
-10. **After user successfully logs in and reaches the Admin Dashboard, you can analyze the intercepted credentials inside Wireshark**
+8. **In your kali terminal, move to a new tab and enter the command `sudo wireshark` to start wireshark**
     
-    -In your kali terminal, move to a new tab and enter the command `sudo wireshark` to start wireshark
-
     -Wireshark is used to capture and analyze the insecure HTTP login request
     
     -Launching it with `sudo wireshark` gives Wireshark the required permissions to monitor network interfaces and intercept traffic.
     
     -Once launched, select the active interface (usually `eth0` or `wlan0` or `any`) and start the packet capture before sending a login request
+
+9. **In your browser (firefox), enter this in the address `http://127.0.0.1`**
+
+    -This would help you navigate to the login page below
+
+![screenshot](updated_current_login.png)
+
+10. **You can use the credentials `admin` and `password123`**
+
+    -*These are inside `server/login.php` in the `$validUser` and `$validPass` variables*
+    -*press `Login` after you enter the credentials to access the `Admin Dashboard below*
+
+![screenshot](admin_dashboard.png)
+
+11. **Navigate back to wireshark**
     
     -In the filter bar, type: `http.request.method == "POST"` -This shows only HTTP POST requests
 
@@ -177,38 +178,41 @@ In your Kali Linux machine open the terminal and enter the command:
 
 ![screenshot](wireshark-1.png)
 
-11. **Click on the packet and expand it (Hypertext Transfer Protocol, HTML Form URL)**
+12. **Click on the packet and expand it (Hypertext Transfer Protocol, HTML Form URL)**
 
     -You will clearly see: **user = <captured_username>**,  **pass = <captured_password>**
 
     -This appears in plaintext because the site uses **insecure HTTP, making it easy for attackers or sniffers to steal credentials
+    
 ![screenshot](final-ws.png)
 ![screenshot](wireshark-final.png)
 
-12. **The `users.txt` file is intentionally insecure and serves as evidence of how vulnerable systems store sensitive information without protection**
+13. **The `users.txt` file is intentionally insecure and serves as evidence of how vulnerable systems store sensitive information without protection**
 
     -Everytime a user submits the login form, the credentials are appended to this file in **plain text**, as shown in the screenshot
 
-**What happens behind the scenes: -the following code in `server/login.php` writes the captured username and password:  
+**What happens behind the scenes: 
+-the following code in `server/login.php` writes the captured username and password:  
 ```
 $log = fopen("users.txt", "a");
 fwrite($log, "User: $username | Pass: $password\n");
 fclose($log);
 ```
-This demonstrates:
+*This demonstrates*:
 -credentials are stored without hashing
 -any attacker with server access can immediately read them
 -this simulates a **real-world insecure credential storage vulnerability**
 -Wireshark + this file together shows both: how credentials leak in transit, and at rest
 
-This file helps demonstrate
+*This file helps demonstrate*
 -poor security practices
 -why servers must NEVER store raw credentials
 -how attackers can escalate privileges after gaining file access
 
 ![screenshot](users-in-use.png)
 
-13. **Use these commands to finally navigate to the file `login_attempts.log`**
+
+14. **Use these commands to finally navigate to the file `login_attempts.log`**
     -navigate to insecure login directory (you can move to a new tab in the terminal for this)
     -use command `ls` to list directories under `insecure-login`
     - `cd logs` - moves you to the logs directory
@@ -232,12 +236,12 @@ password: password123
 
 **The login attempts help demostrate: *Brute force feasibility, Credential stuffing scenarios, importance of rare limiting and the importance of strong passwords***
 
--**A real-world secure system should not reveal whether username or password was incorrect ("user enumeration mitigation")**
+-**A real-world secure system should not reveal whether username or password was incorrect** ("user enumeration mitigation")
 
 -**It should also add lockouts and multifactor authentication**
 
 
-##Lessons Learned
+## Lessons Learned
 
 -How insecure HTTP communication exposes credentials in plaintext
 
@@ -254,13 +258,13 @@ password: password123
 -Importrance of secure directory structures and proper server configurations 
 
 
-##Ethical Disclaimer
+## Ethical Disclaimer
 
-**The project is intended for educational and cybersecurity awareness purposes only.**
+**The project is intended for educational and cybersecurity awareness purposes only**
 
 **Always practice ethical hacking with legal boundaries**
 
-###Author Information
+### Author Information
 
 **Cleveland Henry Lore**
 Cybersecurity Enthusiast | Penetration Testing
