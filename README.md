@@ -45,9 +45,7 @@ This version uses the simplest possible server so as to focus on cybersecurity c
 
        - Kali Linux (VM or Bare Metal)
        
-       - Apache2 Web Server
-       
-       - PHP 8+
+       - PHP Built-in Development Server (PHP 8+)
        
        - Wireshark
        
@@ -55,28 +53,20 @@ This version uses the simplest possible server so as to focus on cybersecurity c
        
 
 ## Project Directory
-project-root/
-
+```
+insecure-login/
 │── public/
-
-│     ├── index.php
-
-│     ├── login.php
-
-│     ├── dashboard.php
-
+│   ├── index.html        # Login page (front-end)
+│   ├── login.php         # Processes login & logs credentials
+│   ├── dashboard.php     # Fake admin dashboard
 │
-
 │── server/
-
-│     ├── users.txt
-
+│   ├── users.txt         # Stores captured credentials in plaintext
 │
-
 │── logs/
-       ├── login_attempts.log
+│   ├── login_attempts.log  # Tracks login successes/failures
 
-
+```
 
 ## Project Workflow
   
@@ -106,16 +96,22 @@ In your Kali Linux machine open the terminal and enter the command:
 **After editing the created files example `nano index.html` press `CTRL + O` then `ENTER` and lasty `CTRL + X` to save the changes.**
 
 -`nano index.html` 
-                 - creates the file index.html paste code from index.html in files section  
+                 - creates the file index.html 
                  - serves as the main landing page containing the login form where users enter their username and password
 
+- [index.html](public/index.html)
+
 -`nano login.php` 
-                 - creates another file login.php, paste the code from login.php in files section  
+                 - creates another file login.php
                  - processed login form submissions by checking entered credentials against the stored `users.txt`
 
+- [login.php](public/login.php)
+  
 -`nano dashboard.php`
-                 - creates file dashboard.php, paste code from dashboard.php in files section
+                 - creates file dashboard.php
                  -displays the protected dashboard page that only logged-in users access after successful authentication
+
+- [dashboard.php](public/dashboard.php)
 
 5. **Create the file users.txt under server/**
 
@@ -125,7 +121,9 @@ In your Kali Linux machine open the terminal and enter the command:
 
 -`touch users.txt`
             - this creates the file users.txt
-            -it will store the list of valid usernames and hashed passwords for login verification
+            - this file stores captured credentials in plaintext.
+
+- [users.txt](server/users.txt)
 
 6. **Create the file login_attempts in logs/**
 
@@ -136,6 +134,8 @@ In your Kali Linux machine open the terminal and enter the command:
 -`touch login_attempts.log`
             - creates a file called login_attempts.log
             - records every login attempt (successful or failed) for monitoring and audit purposes and security analysis
+
+- [login_attempts.log](logs/login_attempts.log)
 
 -`cd ..` - moves you back to insecure-login directory
 
@@ -264,7 +264,45 @@ password: password123
 
 **Always practice ethical hacking with legal boundaries**
 
+## Uploading This Project to Github
+
+*Follow these steps to upload the entire insecure-login project to your GitHub repository.*
+
+1. **Navigate to the project folder**
+  `cd ~/insecure-login`
+
+2. **Initialize Git**
+   `git init`
+
+3. **Add all projeect files**
+   `git add .`
+
+4. **Commit your project**
+   `git commit -m "Initial commit: insecure login demo"`
+
+5. **Switch to main branch**
+   `git branch -M main
+
+6. **Link your GitHub repository**
+   
+   `git remote add origin <your-repo-url>`
+   -Replace `<your-repo-url> with your actual Github repo link
+
+7. **Push to GitHub
+
+   `git push -u origin main`
+
+   - Your project will now appear on GitHub
+   
+   
+
 ### Author Information
 
 **Cleveland Henry Lore**
 Cybersecurity Enthusiast | Penetration Testing
+
+## License
+
+*This project is open-source and distributed under the **MIT License*.
+
+*See the **LICENSE** file for details.*
