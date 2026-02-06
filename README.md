@@ -214,6 +214,7 @@ This file helps demonstrate
     - `cd logs` - moves you to the logs directory
     - `ls` - shows the `login_attempts.log` file we created
     - `cat login_attempts.log` -shows the contents of the login attempts that were captured
+
 ![screenshot](login-attempts.png)
 
 **The screenshot shows how the system responds differently to valid and invalid credentials.**
