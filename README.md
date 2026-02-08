@@ -224,10 +224,13 @@ fclose($log);
 **The screenshot shows how the system responds differently to valid and invalid credentials.**
 
 *When a user enters the wrong username or password, the script returns:*
+
 `Invalid credentials. Try again`
+
 -This demonstrates: basic authentication logic, how a system handles incorrect logins and what attacker sees when brute-forcing credentials.
 
 *Using the deafault credentials would lead to a successful login*
+
 ```
 username: admin
 password: password123
@@ -262,33 +265,39 @@ password: password123
 
 **The project is intended for educational and cybersecurity awareness purposes only**
 
-**Always practice ethical hacking with legal boundaries**
+*Always practice ethical hacking with legal boundaries*
 
 ## Uploading This Project to Github
 
 *Follow these steps to upload the entire insecure-login project to your GitHub repository.*
 
 1. **Navigate to the project folder**
+   
   `cd ~/insecure-login`
 
 2. **Initialize Git**
+   
    `git init`
 
 3. **Add all projeect files**
+   
    `git add .`
 
 4. **Commit your project**
+   
    `git commit -m "Initial commit: insecure login demo"`
 
 5. **Switch to main branch**
-   `git branch -M main
+   
+   `git branch -M main`
 
 6. **Link your GitHub repository**
    
    `git remote add origin <your-repo-url>`
-   -Replace `<your-repo-url> with your actual Github repo link
+   
+   -Replace `<your-repo-url>` with your actual Github repo link
 
-7. **Push to GitHub
+7. **Push to GitHub**
 
    `git push -u origin main`
 
@@ -299,6 +308,7 @@ password: password123
 ## Author Information
 
 **Cleveland Henry Lore**
+
 *Cybersecurity Enthusiast* | *Penetration Testing*
 
 ## License
