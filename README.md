@@ -296,10 +296,10 @@ password: password123
    
    
 
-### Author Information
+## Author Information
 
 **Cleveland Henry Lore**
-Cybersecurity Enthusiast | Penetration Testing
+*Cybersecurity Enthusiast* | *Penetration Testing*
 
 ## License
 
