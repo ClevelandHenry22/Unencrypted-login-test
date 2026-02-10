@@ -140,7 +140,7 @@ In your Kali Linux machine open the terminal and enter the command:
 -`cd ..` - moves you back to insecure-login directory
 
             
-7. **Under the directory `insecure-login` we created, enter this command `sudo php -S 0.0.0.0:80 -t public`
+7. **Under the directory `insecure-login` we created, enter this command `sudo php -S 0.0.0.0:80 -t public`**
 *This command starts a built-in **PHP development server that**:*
        -listens on all network interfaces (0.0.0.0)
        -runs on port 80 (default web port)
