@@ -199,7 +199,7 @@ $log = fopen("users.txt", "a");
 fwrite($log, "User: $username | Pass: $password\n");
 fclose($log);
 ```
-*This demonstrates*:
+**This demonstrates**:
 
 -credentials are stored without hashing
 
@@ -209,7 +209,7 @@ fclose($log);
 
 -Wireshark + this file together shows both: how credentials leak in transit, and at rest
 
-*This file helps demonstrate*
+**This file helps demonstrate**:
 
 -poor security practices
 
