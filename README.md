@@ -35,7 +35,7 @@
 
 **How to Run THis Project (PHP Built-In Server)**
 
-This project helps beginners understand how insecure login forms can leak credentials during trasmission and how attackers analyze them.
+This project helps understand how insecure login forms can leak credentials during trasmission and how attackers analyze them.
 
 This version uses the simplest possible server so as to focus on cybersecurity concepts, not server configuration.
 
@@ -93,7 +93,7 @@ In your Kali Linux machine open the terminal and enter the command:
 
 -`cd public` - change to public directory
 
-**After editing the created files example `nano index.html` press `CTRL + O` then `ENTER` and lasty `CTRL + X` to save the changes.**
+**After editing the created files example `nano index.html` press `CTRL + O` then `ENTER` and lasty `CTRL + X` to save the changes**.
 
 -`nano index.html` 
                  - creates the file index.html 
@@ -109,7 +109,7 @@ In your Kali Linux machine open the terminal and enter the command:
   
 -`nano dashboard.php`
                  - creates file dashboard.php
-                 -displays the protected dashboard page that only logged-in users access after successful authentication
+                 - displays the protected dashboard page that only logged-in users access after successful authentication
 
 - [dashboard.php](public/dashboard.php)
 
@@ -182,7 +182,7 @@ In your Kali Linux machine open the terminal and enter the command:
 
     -You will clearly see: **user = <captured_username>**,  **pass = <captured_password>**
 
-    -This appears in plaintext because the site uses **insecure HTTP, making it easy for attackers or sniffers to steal credentials
+    -This appears in plaintext because the site uses **insecure HTTP**, making it easy for attackers or sniffers to steal credentials
     
 ![screenshot](final-ws.png)
 ![screenshot](wireshark-final.png)
@@ -191,7 +191,8 @@ In your Kali Linux machine open the terminal and enter the command:
 
     -Everytime a user submits the login form, the credentials are appended to this file in **plain text**, as shown in the screenshot
 
-**What happens behind the scenes: 
+**What happens behind the scenes**: 
+
 -the following code in `server/login.php` writes the captured username and password:  
 ```
 $log = fopen("users.txt", "a");
@@ -199,15 +200,23 @@ fwrite($log, "User: $username | Pass: $password\n");
 fclose($log);
 ```
 *This demonstrates*:
+
 -credentials are stored without hashing
+
 -any attacker with server access can immediately read them
+
 -this simulates a **real-world insecure credential storage vulnerability**
+
 -Wireshark + this file together shows both: how credentials leak in transit, and at rest
 
 *This file helps demonstrate*
+
 -poor security practices
+
 -why servers must NEVER store raw credentials
+
 -how attackers can escalate privileges after gaining file access
+
 
 ![screenshot](users-in-use.png)
 
@@ -227,17 +236,19 @@ fclose($log);
 
 `Invalid credentials. Try again`
 
--This demonstrates: basic authentication logic, how a system handles incorrect logins and what attacker sees when brute-forcing credentials.
+**This demonstrates**:
+*-basic authentication logic, how a system handles incorrect logins and what attacker sees when brute-forcing credentials*.
 
-*Using the deafault credentials would lead to a successful login*
+*-Using the default credentials would lead to a successful login*
 
 ```
 username: admin
 password: password123
 ```
-*The system redirects the user to the **dashboard.php** page*
+*-The system redirects the user to the **dashboard.php** page*
 
-**The login attempts help demostrate: *Brute force feasibility, Credential stuffing scenarios, importance of rare limiting and the importance of strong passwords***
+**The login attempts help demostrate: 
+*-Brute force feasibility, Credential stuffing scenarios, importance of rare limiting and the importance of strong passwords***
 
 -**A real-world secure system should not reveal whether username or password was incorrect** ("user enumeration mitigation")
 
